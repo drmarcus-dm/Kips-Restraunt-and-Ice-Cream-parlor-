@@ -8,6 +8,8 @@
     <style>
         body {
             font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
         }
         .navbar {
             background-color: #000 !important;
@@ -24,7 +26,7 @@
             background-size: cover;
             background-position: center;
             color: white;
-            padding: 150px 0;
+            height: calc(100vh - 56px);
             text-align: center;
         }
         .section-title {
@@ -54,7 +56,7 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="index.html">
                 <img src="https://www.kipsrestaurants.com/images/kips_images/kips-icecream-logo.jpeg" alt="Kips Logo">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -62,79 +64,21 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav me-auto">
-                    <li class="nav-item"><a class="nav-link" href="#home">HOME</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about">ABOUT US</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#menu">MENU</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#find">FIND A KIPS</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#gallery">FOOD GALLERY</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#feedback">FEEDBACK</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#ads">ADS</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html">HOME</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">ABOUT US</a></li>
+                    <li class="nav-item"><a class="nav-link" href="menu.html">MENU</a></li>
+                    <li class="nav-item"><a class="nav-link" href="find.html">FIND A KIPS</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gallery.html">FOOD GALLERY</a></li>
+                    <li class="nav-item"><a class="nav-link" href="feedback.html">FEEDBACK</a></li>
+                    <li class="nav-item"><a class="nav-link" href="ads.html">ADS</a></li>
                 </ul>
                 <button class="btn order-btn text-white">ORDER: +265 (0) 883 999 999</button>
             </div>
         </div>
     </nav>
 
-    <section id="home" class="hero">
-        <div class="container">
-            <h1 class="display-4">Welcome to Kips Restaurant and Ice Cream Parlor</h1>
-            <p class="lead">Delicious meals, refreshing ice creams, and unforgettable experiences in Malawi.</p>
-        </div>
-    </section>
-
-    <section id="about" class="py-5">
-        <div class="container">
-            <h2 class="section-title text-center">About Us</h2>
-            <p>Kips Restaurants and Ice Cream Parlor operates as a customer-based brand offering tasty food and excellent service. It maintains an international modernized atmosphere while keeping local prices, with plans to expand service across Malawi through continued customer support. Loyalty from customers is valued and treated with high regard.</p>
-            <p>Kips began in 1991 as Kool Ice Products, initially operating as a small-scale ice cream parlor in one location, selling products such as ice creams, ice lollies, choc sticks, and choc nuts. It evolved from ice cream sales to full meals and fast food. The restaurant started by selling three chickens a day with only eight tables. Over time, it transformed into a chain of restaurants under the Giga family, growing from a single outlet to a well-known brand.</p>
-            <p>On May 17, 2011, the original Kips location collapsed in an unfortunate incident, resulting in the loss of the founder, Mohammed Shaffique Giga, who was the head of the family and the driving force behind the brand. This event also destroyed the family home after 20 years. Despite the tragedy, the brand has continued for two decades, becoming an unforgettable name in Malawi, sustained by loyal customers.</p>
-            <p>The mission stems from the late Mohammed Shaffique Giga's vision to establish Kips not just as a restaurant but as a prominent brand in Malawi. His humble, honest, down-to-earth, and optimistic personality, along with his creative and enthusiastic approach, shaped the brand's foundation. The goal is to welcome customers into a modernized setting at accessible prices, ensuring growth and success in the future with ongoing support.</p>
-        </div>
-    </section>
-                                                        
-    <footer class="text-center">
-        <p>&copy; 2026 Kips Restaurant and Ice Cream Parlor. All rights reserved.</p>
-        <p>Follow us on <a href="https://www.facebook.com/KipsRestaurantAndIceCreamParlour/" class="text-white">Facebook</a> and <a href="https://www.instagram.com/kipsrestaurantmw/" class="text-white">Instagram</a></p>
-        <p>&copy; Designed and developed by Dynamité Graphix 2026</p>
-    </footer>
+    <section class="hero"></section>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script>
-        document.querySelectorAll('.nav-link').forEach(link => {
-            link.addEventListener('click', function(e) {
-                if (this.getAttribute('href').startsWith('#')) {
-                    e.preventDefault();
-                    const target = document.querySelector(this.getAttribute('href'));
-                    target.scrollIntoView({ behavior: 'smooth' });
-                }
-            });
-        });
-
-        const searchInput = document.getElementById('menuSearch');
-        if (searchInput) {
-            searchInput.addEventListener('input', function() {
-                const filter = this.value.toLowerCase();
-                const accordions = document.querySelectorAll('.accordion-item');
-                accordions.forEach(item => {
-                    const header = item.querySelector('.accordion-button');
-                    const body = item.querySelector('.accordion-body');
-                    const items = body.querySelectorAll('.menu-item, h4');
-                    let visible = false;
-                    items.forEach(el => {
-                        if (el.textContent.toLowerCase().includes(filter)) {
-                            el.style.display = '';
-                            visible = true;
-                        } else {
-                            el.style.display = 'none';
-                        }
-                    });
-                    if (header.textContent.toLowerCase().includes(filter)) {
-                        visible = true;
-                    }
-                    item.style.display = visible ? '' : 'none';
-                });
-            });
-        }
-    </script>
 </body>
 </html>
