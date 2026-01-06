@@ -31,19 +31,14 @@
             color: #dc3545;
             margin-bottom: 30px;
         }
-        .gallery img {
-            width: 100%;
-            height: 200px;
+        .gallery .carousel img {
+            height: 400px;
             object-fit: cover;
-            border-radius: 10px;
         }
         .menu-item {
             display: flex;
             justify-content: space-between;
             margin-bottom: 10px;
-        }
-        .menu-section {
-            margin-bottom: 40px;
         }
         .menu-image {
             max-height: 200px;
@@ -106,211 +101,307 @@
                 <input type="text" id="menuSearch" class="form-control" placeholder="Search for menu items...">
             </div>
 
-            <div id="menuContent">
-                <div class="menu-section">
-                    <h3 class="section-title">Students Specials</h3>
-                    <img src="https://www.kipsrestaurants.com/images/kips_images/chicken-chips-1.jpeg" alt="Students Specials" class="img-fluid menu-image mb-3">
-                    <div class="menu-item"><span>Chips Chicken</span><span>MWK 6500</span></div>
-                    <div class="menu-item"><span>Karai chicken + naan</span><span>MWK 6500</span></div>
-                    <div class="menu-item"><span>Sizzlers (Chicken > Steak)</span><span>MWK 6500</span></div>
-                    <div class="menu-item"><span>KING Steak & Chicken</span><span>MWK 7500</span></div>
+            <div class="accordion" id="menuAccordion">
+                <div class="accordion-item menu-section">
+                    <h3 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseStudentsSpecials" aria-expanded="true" aria-controls="collapseStudentsSpecials">
+                            Students Specials
+                        </button>
+                    </h3>
+                    <div id="collapseStudentsSpecials" class="accordion-collapse collapse show" data-bs-parent="#menuAccordion">
+                        <div class="accordion-body">
+                            <img src="https://www.kipsrestaurants.com/images/kips_images/chicken-chips-1.jpeg" alt="Students Specials" class="img-fluid menu-image mb-3">
+                            <div class="menu-item"><span>Chips Chicken</span><span>MWK 6500</span></div>
+                            <div class="menu-item"><span>Karai chicken + naan</span><span>MWK 6500</span></div>
+                            <div class="menu-item"><span>Sizzlers (Chicken > Steak)</span><span>MWK 6500</span></div>
+                            <div class="menu-item"><span>KING Steak & Chicken</span><span>MWK 7500</span></div>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="menu-section">
-                    <h3 class="section-title">Burgers</h3>
-                    <img src="https://www.kipsrestaurants.com/images/kips_images/kips-burger-chips.jpeg" alt="Burgers" class="img-fluid menu-image mb-3">
-                    <div class="menu-item"><span>Chicken/Beef</span><span>MWK 11000</span></div>
-                    <div class="menu-item"><span>Juicy Mexican Chicken Burger</span><span>MWK 12500</span></div>
-                    <div class="menu-item"><span>The KING Chicken/Beef</span><span>MWK 16000</span></div>
-                    <div class="menu-item"><span>Fish Burger</span><span>MWK 18000</span></div>
-                    <div class="menu-item"><span>Add Cheese</span><span>MWK 1000</span></div>
-                    <div class="menu-item"><span>Add Chips</span><span>MWK 2000</span></div>
-                    <div class="menu-item"><span>Add Peri Chips</span><span>MWK 3000</span></div>
+                <div class="accordion-item menu-section">
+                    <h3 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseBurgers" aria-expanded="false" aria-controls="collapseBurgers">
+                            Burgers
+                        </button>
+                    </h3>
+                    <div id="collapseBurgers" class="accordion-collapse collapse" data-bs-parent="#menuAccordion">
+                        <div class="accordion-body">
+                            <img src="https://www.kipsrestaurants.com/images/kips_images/kips-burger-chips.jpeg" alt="Burgers" class="img-fluid menu-image mb-3">
+                            <div class="menu-item"><span>Chicken/Beef</span><span>MWK 11000</span></div>
+                            <div class="menu-item"><span>Juicy Mexican Chicken Burger</span><span>MWK 12500</span></div>
+                            <div class="menu-item"><span>The KING Chicken/Beef</span><span>MWK 16000</span></div>
+                            <div class="menu-item"><span>Fish Burger</span><span>MWK 18000</span></div>
+                            <div class="menu-item"><span>Add Cheese</span><span>MWK 1000</span></div>
+                            <div class="menu-item"><span>Add Chips</span><span>MWK 2000</span></div>
+                            <div class="menu-item"><span>Add Peri Chips</span><span>MWK 3000</span></div>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="menu-section">
-                    <h3 class="section-title">Breakfast & Snacks</h3>
-                    <img src="https://www.kipsrestaurants.com/images/kips_images/omlette-chips.jpeg" alt="Breakfast & Snacks" class="img-fluid menu-image mb-3">
-                    <div class="menu-item"><span>Chips & Egg</span><span>MWK 6000</span></div>
-                    <div class="menu-item"><span>Chips & Sausage</span><span>MWK 9000</span></div>
-                    <div class="menu-item"><span>Basic (Egg, chips, toast, tea)</span><span>MWK 11000</span></div>
-                    <div class="menu-item"><span>Half (Egg, sausage, chips, beans, toast, tea)</span><span>MWK 14000</span></div>
-                    <div class="menu-item"><span>Full (2 Eggs, 2 sausage, beans, chips, toast, tea)</span><span>MWK 17000</span></div>
-                    <div class="menu-item"><span>Beef Samoosas</span><span>MWK 1500</span></div>
-                    <div class="menu-item"><span>Meat Pies</span><span>MWK 4000</span></div>
-                    <div class="menu-item"><span>Fried Egg</span><span>MWK 2000</span></div>
-                    <div class="menu-item"><span>Sausage</span><span>MWK 5000</span></div>
-                    <div class="menu-item"><span>Chicken Piece</span><span>MWK 5000</span></div>
-                    <div class="menu-item"><span>Chicken Pie</span><span>MWK 5000</span></div>
+                <div class="accordion-item menu-section">
+                    <h3 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseBreakfastSnacks" aria-expanded="false" aria-controls="collapseBreakfastSnacks">
+                            Breakfast & Snacks
+                        </button>
+                    </h3>
+                    <div id="collapseBreakfastSnacks" class="accordion-collapse collapse" data-bs-parent="#menuAccordion">
+                        <div class="accordion-body">
+                            <img src="https://www.kipsrestaurants.com/images/kips_images/omlette-chips.jpeg" alt="Breakfast & Snacks" class="img-fluid menu-image mb-3">
+                            <div class="menu-item"><span>Chips & Egg</span><span>MWK 6000</span></div>
+                            <div class="menu-item"><span>Chips & Sausage</span><span>MWK 9000</span></div>
+                            <div class="menu-item"><span>Basic (Egg, chips, toast, tea)</span><span>MWK 11000</span></div>
+                            <div class="menu-item"><span>Half (Egg, sausage, chips, beans, toast, tea)</span><span>MWK 14000</span></div>
+                            <div class="menu-item"><span>Full (2 Eggs, 2 sausage, beans, chips, toast, tea)</span><span>MWK 17000</span></div>
+                            <div class="menu-item"><span>Beef Samoosas</span><span>MWK 1500</span></div>
+                            <div class="menu-item"><span>Meat Pies</span><span>MWK 4000</span></div>
+                            <div class="menu-item"><span>Fried Egg</span><span>MWK 2000</span></div>
+                            <div class="menu-item"><span>Sausage</span><span>MWK 5000</span></div>
+                            <div class="menu-item"><span>Chicken Piece</span><span>MWK 5000</span></div>
+                            <div class="menu-item"><span>Chicken Pie</span><span>MWK 5000</span></div>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="menu-section">
-                    <h3 class="section-title">Sandwiches & Rolls</h3>
-                    <img src="https://www.kipsrestaurants.com/images/kips_images/chck-mayo-sandwich.jpeg" alt="Sandwiches & Rolls" class="img-fluid menu-image mb-3">
-                    <div class="menu-item"><span>Cheese & Tomato</span><span>MWK 6000</span></div>
-                    <div class="menu-item"><span>Chicken & Mayo</span><span>MWK 8000</span></div>
-                    <div class="menu-item"><span>Egg Sandwich</span><span>MWK 6000</span></div>
-                    <div class="menu-item"><span>Egg Roll</span><span>MWK 8000</span></div>
-                    <div class="menu-item"><span>Chicken Roll (peri peri)</span><span>MWK 18000</span></div>
-                    <div class="menu-item"><span>S.Fried Strips Wrap</span><span>MWK 17500</span></div>
-                    <div class="menu-item"><span>Mexican Wrap</span><span>MWK 18000</span></div>
-                    <div class="menu-item"><span>Steak Wrap</span><span>MWK 20000</span></div>
-                    <div class="menu-item"><span>Add Cheese</span><span>MWK 1000</span></div>
-                    <div class="menu-item"><span>Add Chips</span><span>MWK 2000</span></div>
-                    <div class="menu-item"><span>Add Peri Chips</span><span>MWK 3000</span></div>
+                <div class="accordion-item menu-section">
+                    <h3 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSandwichesRolls" aria-expanded="false" aria-controls="collapseSandwichesRolls">
+                            Sandwiches & Rolls
+                        </button>
+                    </h3>
+                    <div id="collapseSandwichesRolls" class="accordion-collapse collapse" data-bs-parent="#menuAccordion">
+                        <div class="accordion-body">
+                            <img src="https://www.kipsrestaurants.com/images/kips_images/chck-mayo-sandwich.jpeg" alt="Sandwiches & Rolls" class="img-fluid menu-image mb-3">
+                            <div class="menu-item"><span>Cheese & Tomato</span><span>MWK 6000</span></div>
+                            <div class="menu-item"><span>Chicken & Mayo</span><span>MWK 8000</span></div>
+                            <div class="menu-item"><span>Egg Sandwich</span><span>MWK 6000</span></div>
+                            <div class="menu-item"><span>Egg Roll</span><span>MWK 8000</span></div>
+                            <div class="menu-item"><span>Chicken Roll (peri peri)</span><span>MWK 18000</span></div>
+                            <div class="menu-item"><span>S.Fried Strips Wrap</span><span>MWK 17500</span></div>
+                            <div class="menu-item"><span>Mexican Wrap</span><span>MWK 18000</span></div>
+                            <div class="menu-item"><span>Steak Wrap</span><span>MWK 20000</span></div>
+                            <div class="menu-item"><span>Add Cheese</span><span>MWK 1000</span></div>
+                            <div class="menu-item"><span>Add Chips</span><span>MWK 2000</span></div>
+                            <div class="menu-item"><span>Add Peri Chips</span><span>MWK 3000</span></div>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="menu-section">
-                    <h3 class="section-title">Chicken Special</h3>
-                    <img src="https://www.kipsrestaurants.com/images/kips_images/chicken-chips.jpeg" alt="Chicken Special" class="img-fluid menu-image mb-3">
-                    <div class="menu-item"><span>Sizzling Steak / Chicken</span><span>MWK 20000</span></div>
-                    <div class="menu-item"><span>King Sizzling</span><span>MWK 25000</span></div>
-                    <div class="menu-item"><span>Chicken Kebab with Mexican Sauce</span><span>MWK 18000</span></div>
-                    <div class="menu-item"><span>Chicken Fillet with Mexican Sauce</span><span>MWK 18000</span></div>
-                    <div class="menu-item"><span>Donner Kebab with Naan From UK</span><span>MWK 35000</span></div>
-                    <div class="menu-item"><span>Masala Chicken Chips (1 Piece)</span><span>MWK 9000</span></div>
-                    <div class="menu-item"><span>Masala Chicken Chips (2 Pieces)</span><span>MWK 13000</span></div>
-                    <div class="menu-item"><span>Masala Chicken Chips (3 Pieces)</span><span>MWK 17000</span></div>
-                    <div class="menu-item"><span>Masala Chicken Chips (4 Pieces)</span><span>MWK 20000</span></div>
+                <div class="accordion-item menu-section">
+                    <h3 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseChickenSpecial" aria-expanded="false" aria-controls="collapseChickenSpecial">
+                            Chicken Special
+                        </button>
+                    </h3>
+                    <div id="collapseChickenSpecial" class="accordion-collapse collapse" data-bs-parent="#menuAccordion">
+                        <div class="accordion-body">
+                            <img src="https://www.kipsrestaurants.com/images/kips_images/chicken-chips.jpeg" alt="Chicken Special" class="img-fluid menu-image mb-3">
+                            <div class="menu-item"><span>Sizzling Steak / Chicken</span><span>MWK 20000</span></div>
+                            <div class="menu-item"><span>King Sizzling</span><span>MWK 25000</span></div>
+                            <div class="menu-item"><span>Chicken Kebab with Mexican Sauce</span><span>MWK 18000</span></div>
+                            <div class="menu-item"><span>Chicken Fillet with Mexican Sauce</span><span>MWK 18000</span></div>
+                            <div class="menu-item"><span>Donner Kebab with Naan From UK</span><span>MWK 35000</span></div>
+                            <div class="menu-item"><span>Masala Chicken Chips (1 Piece)</span><span>MWK 9000</span></div>
+                            <div class="menu-item"><span>Masala Chicken Chips (2 Pieces)</span><span>MWK 13000</span></div>
+                            <div class="menu-item"><span>Masala Chicken Chips (3 Pieces)</span><span>MWK 17000</span></div>
+                            <div class="menu-item"><span>Masala Chicken Chips (4 Pieces)</span><span>MWK 20000</span></div>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="menu-section">
-                    <h3 class="section-title">Fish Dishes</h3>
-                    <img src="https://www.kipsrestaurants.com/images/kips_images/kips-chambo.jpeg" alt="Fish Dishes" class="img-fluid menu-image mb-3">
-                    <div class="menu-item"><span>Chambo whole/open</span><span>MWK 5000</span></div>
-                    <div class="menu-item"><span>Chambo fillet (tartar or garlic butter)</span><span>MWK 5500</span></div>
-                    <div class="menu-item"><span>Fish shawarma</span><span>MWK 5500 / 6200</span></div>
-                    <div class="menu-item"><span>Fish Burger</span><span>MWK 3500 / 4100</span></div>
+                <div class="accordion-item menu-section">
+                    <h3 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFishDishes" aria-expanded="false" aria-controls="collapseFishDishes">
+                            Fish Dishes
+                        </button>
+                    </h3>
+                    <div id="collapseFishDishes" class="accordion-collapse collapse" data-bs-parent="#menuAccordion">
+                        <div class="accordion-body">
+                            <img src="https://www.kipsrestaurants.com/images/kips_images/kips-chambo.jpeg" alt="Fish Dishes" class="img-fluid menu-image mb-3">
+                            <div class="menu-item"><span>Chambo whole/open</span><span>MWK 5000</span></div>
+                            <div class="menu-item"><span>Chambo fillet (tartar or garlic butter)</span><span>MWK 5500</span></div>
+                            <div class="menu-item"><span>Fish shawarma</span><span>MWK 5500 / 6200</span></div>
+                            <div class="menu-item"><span>Fish Burger</span><span>MWK 3500 / 4100</span></div>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="menu-section">
-                    <h3 class="section-title">Traditional Platter</h3>
-                    <img src="https://www.kipsrestaurants.com/images/kips_images/chicken-chips-kips.jpeg" alt="Traditional Platter" class="img-fluid menu-image mb-3">
-                    <h4>Fried Chicken</h4>
-                    <div class="menu-item"><span>1Pc</span><span>MWK 8000</span></div>
-                    <div class="menu-item"><span>2Pc</span><span>MWK 11500</span></div>
-                    <div class="menu-item"><span>3Pc</span><span>MWK 14500</span></div>
-                    <div class="menu-item"><span>4Pc</span><span>MWK 18000</span></div>
-                    <h4>Roasted Chicken</h4>
-                    <div class="menu-item"><span>1Pc</span><span>MWK 8000</span></div>
-                    <div class="menu-item"><span>2Pc</span><span>MWK 11500</span></div>
-                    <div class="menu-item"><span>3Pc</span><span>MWK 14500</span></div>
-                    <div class="menu-item"><span>4Pc</span><span>MWK 18000</span></div>
-                    <h4>Beef Stew</h4>
-                    <div class="menu-item"><span>1Pc</span><span>MWK 9000</span></div>
-                    <div class="menu-item"><span>2Pc</span><span>MWK 12000</span></div>
-                    <div class="menu-item"><span>3Pc</span><span>MWK 16000</span></div>
-                    <div class="menu-item"><span>4Pc</span><span>MWK 19000</span></div>
-                    <div class="menu-item"><span>Chambo (Large)</span><span>MWK 22000</span></div>
-                    <div class="menu-item"><span>T-Bone</span><span>MWK 18000</span></div>
-                    <div class="menu-item"><span>Popcorn Chicken</span><span>MWK 18000</span></div>
-                    <div class="menu-item"><span>Zinger Chicken Burger</span><span>MWK 18000</span></div>
-                    <div class="menu-item"><span>Chicken Nuggets</span><span>MWK 14000</span></div>
+                <div class="accordion-item menu-section">
+                    <h3 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTraditionalPlatter" aria-expanded="false" aria-controls="collapseTraditionalPlatter">
+                            Traditional Platter
+                        </button>
+                    </h3>
+                    <div id="collapseTraditionalPlatter" class="accordion-collapse collapse" data-bs-parent="#menuAccordion">
+                        <div class="accordion-body">
+                            <img src="https://www.kipsrestaurants.com/images/kips_images/chicken-chips-kips.jpeg" alt="Traditional Platter" class="img-fluid menu-image mb-3">
+                            <h4>Fried Chicken</h4>
+                            <div class="menu-item"><span>1Pc</span><span>MWK 8000</span></div>
+                            <div class="menu-item"><span>2Pc</span><span>MWK 11500</span></div>
+                            <div class="menu-item"><span>3Pc</span><span>MWK 14500</span></div>
+                            <div class="menu-item"><span>4Pc</span><span>MWK 18000</span></div>
+                            <h4>Roasted Chicken</h4>
+                            <div class="menu-item"><span>1Pc</span><span>MWK 8000</span></div>
+                            <div class="menu-item"><span>2Pc</span><span>MWK 11500</span></div>
+                            <div class="menu-item"><span>3Pc</span><span>MWK 14500</span></div>
+                            <div class="menu-item"><span>4Pc</span><span>MWK 18000</span></div>
+                            <h4>Beef Stew</h4>
+                            <div class="menu-item"><span>1Pc</span><span>MWK 9000</span></div>
+                            <div class="menu-item"><span>2Pc</span><span>MWK 12000</span></div>
+                            <div class="menu-item"><span>3Pc</span><span>MWK 16000</span></div>
+                            <div class="menu-item"><span>4Pc</span><span>MWK 19000</span></div>
+                            <div class="menu-item"><span>Chambo (Large)</span><span>MWK 22000</span></div>
+                            <div class="menu-item"><span>T-Bone</span><span>MWK 18000</span></div>
+                            <div class="menu-item"><span>Popcorn Chicken</span><span>MWK 18000</span></div>
+                            <div class="menu-item"><span>Zinger Chicken Burger</span><span>MWK 18000</span></div>
+                            <div class="menu-item"><span>Chicken Nuggets</span><span>MWK 14000</span></div>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="menu-section">
-                    <h3 class="section-title">Cheesy Pizza</h3>
-                    <img src="https://www.kipsrestaurants.com/images/kips_images/kips-pizza-items.jpeg" alt="Cheesy Pizza" class="img-fluid menu-image mb-3">
-                    <h4>Margherita</h4>
-                    <div class="menu-item"><span>S</span><span>MWK 16000</span></div>
-                    <div class="menu-item"><span>M</span><span>MWK 22000</span></div>
-                    <div class="menu-item"><span>L</span><span>MWK 27000</span></div>
-                    <h4>Vegetarian</h4>
-                    <div class="menu-item"><span>S</span><span>MWK 16500</span></div>
-                    <div class="menu-item"><span>M</span><span>MWK 23000</span></div>
-                    <div class="menu-item"><span>L</span><span>MWK 28000</span></div>
-                    <h4>Hawaiian</h4>
-                    <div class="menu-item"><span>S</span><span>MWK 16500</span></div>
-                    <div class="menu-item"><span>M</span><span>MWK 23000</span></div>
-                    <div class="menu-item"><span>L</span><span>MWK 28000</span></div>
-                    <h4>Chicken Mushroom</h4>
-                    <div class="menu-item"><span>S</span><span>MWK 16500</span></div>
-                    <div class="menu-item"><span>M</span><span>MWK 23000</span></div>
-                    <div class="menu-item"><span>L</span><span>MWK 28000</span></div>
-                    <h4>Regina</h4>
-                    <div class="menu-item"><span>S</span><span>MWK 17000</span></div>
-                    <div class="menu-item"><span>M</span><span>MWK 24000</span></div>
-                    <div class="menu-item"><span>L</span><span>MWK 29000</span></div>
-                    <h4>Four seasons</h4>
-                    <div class="menu-item"><span>S</span><span>MWK 17000</span></div>
-                    <div class="menu-item"><span>M</span><span>MWK 24000</span></div>
-                    <div class="menu-item"><span>L</span><span>MWK 29000</span></div>
-                    <h4>Steak Lovers</h4>
-                    <div class="menu-item"><span>M</span><span>MWK 32000</span></div>
-                    <h4>Indiana</h4>
-                    <div class="menu-item"><span>S</span><span>MWK 17000</span></div>
-                    <div class="menu-item"><span>M</span><span>MWK 24000</span></div>
-                    <div class="menu-item"><span>L</span><span>MWK 29000</span></div>
-                    <h4>Extravaganza</h4>
-                    <div class="menu-item"><span>S</span><span>MWK 17000</span></div>
-                    <div class="menu-item"><span>M</span><span>MWK 24000</span></div>
-                    <div class="menu-item"><span>L</span><span>MWK 29000</span></div>
-                    <h4>Chicken Mexican</h4>
-                    <div class="menu-item"><span>S</span><span>MWK 17000</span></div>
-                    <div class="menu-item"><span>M</span><span>MWK 24000</span></div>
-                    <div class="menu-item"><span>L</span><span>MWK 29000</span></div>
-                    <h4>Donner</h4>
-                    <div class="menu-item"><span>M</span><span>MWK 40000</span></div>
+                <div class="accordion-item menu-section">
+                    <h3 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCheesyPizza" aria-expanded="false" aria-controls="collapseCheesyPizza">
+                            Cheesy Pizza
+                        </button>
+                    </h3>
+                    <div id="collapseCheesyPizza" class="accordion-collapse collapse" data-bs-parent="#menuAccordion">
+                        <div class="accordion-body">
+                            <img src="https://www.kipsrestaurants.com/images/kips_images/kips-pizza-items.jpeg" alt="Cheesy Pizza" class="img-fluid menu-image mb-3">
+                            <h4>Margherita</h4>
+                            <div class="menu-item"><span>S</span><span>MWK 16000</span></div>
+                            <div class="menu-item"><span>M</span><span>MWK 22000</span></div>
+                            <div class="menu-item"><span>L</span><span>MWK 27000</span></div>
+                            <h4>Vegetarian</h4>
+                            <div class="menu-item"><span>S</span><span>MWK 16500</span></div>
+                            <div class="menu-item"><span>M</span><span>MWK 23000</span></div>
+                            <div class="menu-item"><span>L</span><span>MWK 28000</span></div>
+                            <h4>Hawaiian</h4>
+                            <div class="menu-item"><span>S</span><span>MWK 16500</span></div>
+                            <div class="menu-item"><span>M</span><span>MWK 23000</span></div>
+                            <div class="menu-item"><span>L</span><span>MWK 28000</span></div>
+                            <h4>Chicken Mushroom</h4>
+                            <div class="menu-item"><span>S</span><span>MWK 16500</span></div>
+                            <div class="menu-item"><span>M</span><span>MWK 23000</span></div>
+                            <div class="menu-item"><span>L</span><span>MWK 28000</span></div>
+                            <h4>Regina</h4>
+                            <div class="menu-item"><span>S</span><span>MWK 17000</span></div>
+                            <div class="menu-item"><span>M</span><span>MWK 24000</span></div>
+                            <div class="menu-item"><span>L</span><span>MWK 29000</span></div>
+                            <h4>Four seasons</h4>
+                            <div class="menu-item"><span>S</span><span>MWK 17000</span></div>
+                            <div class="menu-item"><span>M</span><span>MWK 24000</span></div>
+                            <div class="menu-item"><span>L</span><span>MWK 29000</span></div>
+                            <h4>Steak Lovers</h4>
+                            <div class="menu-item"><span>M</span><span>MWK 32000</span></div>
+                            <h4>Indiana</h4>
+                            <div class="menu-item"><span>S</span><span>MWK 17000</span></div>
+                            <div class="menu-item"><span>M</span><span>MWK 24000</span></div>
+                            <div class="menu-item"><span>L</span><span>MWK 29000</span></div>
+                            <h4>Extravaganza</h4>
+                            <div class="menu-item"><span>S</span><span>MWK 17000</span></div>
+                            <div class="menu-item"><span>M</span><span>MWK 24000</span></div>
+                            <div class="menu-item"><span>L</span><span>MWK 29000</span></div>
+                            <h4>Chicken Mexican</h4>
+                            <div class="menu-item"><span>S</span><span>MWK 17000</span></div>
+                            <div class="menu-item"><span>M</span><span>MWK 24000</span></div>
+                            <div class="menu-item"><span>L</span><span>MWK 29000</span></div>
+                            <h4>Donner</h4>
+                            <div class="menu-item"><span>M</span><span>MWK 40000</span></div>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="menu-section">
-                    <h3 class="section-title">Students Special (Pizza & More)</h3>
-                    <img src="https://www.kipsrestaurants.com/images/kips_images/kips-pizza-items.jpeg" alt="Students Special Pizza" class="img-fluid menu-image mb-3">
-                    <div class="menu-item"><span>Chicken & Chips</span><span>MWK 3500</span></div>
-                    <div class="menu-item"><span>Chicken Burger with chips</span><span>MWK 5500</span></div>
-                    <div class="menu-item"><span>Beef Burger with chips</span><span>MWK 5500</span></div>
-                    <h4>Chicken Mushroom Pizza</h4>
-                    <div class="menu-item"><span>S</span><span>MWK 9000</span></div>
-                    <div class="menu-item"><span>M</span><span>MWK 12000</span></div>
-                    <div class="menu-item"><span>L</span><span>MWK 14000</span></div>
-                    <h4>Four Seasons Pizza</h4>
-                    <div class="menu-item"><span>S</span><span>MWK 10000</span></div>
-                    <div class="menu-item"><span>M</span><span>MWK 13000</span></div>
-                    <div class="menu-item"><span>L</span><span>MWK 15000</span></div>
-                    <h4>Veg Pizza</h4>
-                    <div class="menu-item"><span>S</span><span>MWK 9000</span></div>
-                    <div class="menu-item"><span>M</span><span>MWK 12000</span></div>
-                    <div class="menu-item"><span>L</span><span>MWK 14000</span></div>
+                <div class="accordion-item menu-section">
+                    <h3 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseStudentsSpecialPizza" aria-expanded="false" aria-controls="collapseStudentsSpecialPizza">
+                            Students Special (Pizza & More)
+                        </button>
+                    </h3>
+                    <div id="collapseStudentsSpecialPizza" class="accordion-collapse collapse" data-bs-parent="#menuAccordion">
+                        <div class="accordion-body">
+                            <img src="https://www.kipsrestaurants.com/images/kips_images/kips-pizza-items.jpeg" alt="Students Special Pizza" class="img-fluid menu-image mb-3">
+                            <div class="menu-item"><span>Chicken & Chips</span><span>MWK 3500</span></div>
+                            <div class="menu-item"><span>Chicken Burger with chips</span><span>MWK 5500</span></div>
+                            <div class="menu-item"><span>Beef Burger with chips</span><span>MWK 5500</span></div>
+                            <h4>Chicken Mushroom Pizza</h4>
+                            <div class="menu-item"><span>S</span><span>MWK 9000</span></div>
+                            <div class="menu-item"><span>M</span><span>MWK 12000</span></div>
+                            <div class="menu-item"><span>L</span><span>MWK 14000</span></div>
+                            <h4>Four Seasons Pizza</h4>
+                            <div class="menu-item"><span>S</span><span>MWK 10000</span></div>
+                            <div class="menu-item"><span>M</span><span>MWK 13000</span></div>
+                            <div class="menu-item"><span>L</span><span>MWK 15000</span></div>
+                            <h4>Veg Pizza</h4>
+                            <div class="menu-item"><span>S</span><span>MWK 9000</span></div>
+                            <div class="menu-item"><span>M</span><span>MWK 12000</span></div>
+                            <div class="menu-item"><span>L</span><span>MWK 14000</span></div>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="menu-section">
-                    <h3 class="section-title">Ice Creams</h3>
-                    <img src="https://www.kipsrestaurants.com/images/kips_images/kips-icecream-logo.jpeg" alt="Ice Creams" class="img-fluid menu-image mb-3">
-                    <div class="menu-item"><span>Cup / Cone</span><span>MWK 4000</span></div>
-                    <div class="menu-item"><span>Cone 99 / Cup 99</span><span>MWK 7000</span></div>
-                    <div class="menu-item"><span>Cone dip / Cup dip</span><span>MWK 7000</span></div>
-                    <div class="menu-item"><span>Cone / Cup dipped 99</span><span>MWK 8000</span></div>
-                    <div class="menu-item"><span>Ice Lollies</span><span>MWK 2000</span></div>
-                    <div class="menu-item"><span>Chockstic</span><span>MWK 5000</span></div>
-                    <div class="menu-item"><span>1/2 Litre Ice Cream</span><span>MWK 6000</span></div>
-                    <div class="menu-item"><span>1/4 Litre Ice Cream</span><span>MWK 8000</span></div>
-                    <div class="menu-item"><span>Choc Fudge Sundae</span><span>MWK 12000</span></div>
-                    <div class="menu-item"><span>Fruit Parfait</span><span>MWK 12000</span></div>
-                    <div class="menu-item"><span>Strawberry Sundae</span><span>MWK 12000</span></div>
-                    <div class="menu-item"><span>Cookie Dough & Ice Cream</span><span>MWK 12000</span></div>
-                    <div class="menu-item"><span>Sizzling Brownie</span><span>MWK 12000</span></div>
-                    <div class="menu-item"><span>Cheese Cake</span><span>MWK 17500</span></div>
+                <div class="accordion-item menu-section">
+                    <h3 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseIceCreams" aria-expanded="false" aria-controls="collapseIceCreams">
+                            Ice Creams
+                        </button>
+                    </h3>
+                    <div id="collapseIceCreams" class="accordion-collapse collapse" data-bs-parent="#menuAccordion">
+                        <div class="accordion-body">
+                            <img src="https://www.kipsrestaurants.com/images/kips_images/kips-icecream-logo.jpeg" alt="Ice Creams" class="img-fluid menu-image mb-3">
+                            <div class="menu-item"><span>Cup / Cone</span><span>MWK 4000</span></div>
+                            <div class="menu-item"><span>Cone 99 / Cup 99</span><span>MWK 7000</span></div>
+                            <div class="menu-item"><span>Cone dip / Cup dip</span><span>MWK 7000</span></div>
+                            <div class="menu-item"><span>Cone / Cup dipped 99</span><span>MWK 8000</span></div>
+                            <div class="menu-item"><span>Ice Lollies</span><span>MWK 2000</span></div>
+                            <div class="menu-item"><span>Choc Stick</span><span>MWK 5000</span></div>
+                            <div class="menu-item"><span>1/2 Litre Ice Cream</span><span>MWK 6000</span></div>
+                            <div class="menu-item"><span>1/4 Litre Ice Cream</span><span>MWK 8000</span></div>
+                            <div class="menu-item"><span>Choc Fudge Sundae</span><span>MWK 12000</span></div>
+                            <div class="menu-item"><span>Fruit Parfait</span><span>MWK 12000</span></div>
+                            <div class="menu-item"><span>Strawberry Sundae</span><span>MWK 12000</span></div>
+                            <div class="menu-item"><span>Cookie Dough & Ice Cream</span><span>MWK 12000</span></div>
+                            <div class="menu-item"><span>Sizzling Brownie</span><span>MWK 12000</span></div>
+                            <div class="menu-item"><span>Cheese Cake</span><span>MWK 17500</span></div>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="menu-section">
-                    <h3 class="section-title">Hot Drinks</h3>
-                    <img src="https://www.kipsrestaurants.com/images/kips_images/hot-chocolate.jpg" alt="Hot Drinks" class="img-fluid menu-image mb-3">
-                    <div class="menu-item"><span>Tea/Coffee</span><span>MWK 5000</span></div>
-                    <div class="menu-item"><span>Indian Tea</span><span>MWK 6000</span></div>
-                    <div class="menu-item"><span>Cappuccino</span><span>MWK 7000</span></div>
-                    <div class="menu-item"><span>Hot Chocolate</span><span>MWK 7000</span></div>
+                <div class="accordion-item menu-section">
+                    <h3 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHotDrinks" aria-expanded="false" aria-controls="collapseHotDrinks">
+                            Hot Drinks
+                        </button>
+                    </h3>
+                    <div id="collapseHotDrinks" class="accordion-collapse collapse" data-bs-parent="#menuAccordion">
+                        <div class="accordion-body">
+                            <img src="https://www.kipsrestaurants.com/images/kips_images/hot-chocolate.jpg" alt="Hot Drinks" class="img-fluid menu-image mb-3">
+                            <div class="menu-item"><span>Tea/Coffee</span><span>MWK 5000</span></div>
+                            <div class="menu-item"><span>Indian Tea</span><span>MWK 6000</span></div>
+                            <div class="menu-item"><span>Cappuccino</span><span>MWK 7000</span></div>
+                            <div class="menu-item"><span>Hot Chocolate</span><span>MWK 7000</span></div>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="menu-section">
-                    <h3 class="section-title">Milkshake & Floats</h3>
-                    <img src="https://www.kipsrestaurants.com/images/kips_images/kips/ice-creams-and-shakes/kips-milkshake.jpg" alt="Milkshake & Floats" class="img-fluid menu-image mb-3">
-                    <div class="menu-item"><span>Milkshake Medium (Strawberry, Vanilla, Chocolate)</span><span>MWK 8000</span></div>
-                    <div class="menu-item"><span>Milkshake Large (Strawberry, Vanilla, Chocolate)</span><span>MWK 10000</span></div>
-                    <div class="menu-item"><span>Milkshake S/V/C (Double thick)</span><span>MWK 12000</span></div>
-                    <div class="menu-item"><span>Choc Chip Milkshake</span><span>MWK 14000</span></div>
-                    <div class="menu-item"><span>Crushed Flake Milkshake</span><span>MWK 14000</span></div>
-                    <div class="menu-item"><span>Ice Cream Float</span><span>MWK 12000</span></div>
-                    <div class="menu-item"><span>Choose a chocolate</span><span>MWK 14000</span></div>
+                <div class="accordion-item menu-section">
+                    <h3 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMilkshakeFloats" aria-expanded="false" aria-controls="collapseMilkshakeFloats">
+                            Milkshake & Floats
+                        </button>
+                    </h3>
+                    <div id="collapseMilkshakeFloats" class="accordion-collapse collapse" data-bs-parent="#menuAccordion">
+                        <div class="accordion-body">
+                            <img src="https://www.kipsrestaurants.com/images/kips_images/kips/ice-creams-and-shakes/kips-milkshake.jpg" alt="Milkshake & Floats" class="img-fluid menu-image mb-3">
+                            <div class="menu-item"><span>Milkshake Medium (Strawberry, Vanilla, Chocolate)</span><span>MWK 8000</span></div>
+                            <div class="menu-item"><span>Milkshake Large (Strawberry, Vanilla, Chocolate)</span><span>MWK 10000</span></div>
+                            <div class="menu-item"><span>Milkshake S/V/C (Double thick)</span><span>MWK 12000</span></div>
+                            <div class="menu-item"><span>Choc Chip Milkshake</span><span>MWK 14000</span></div>
+                            <div class="menu-item"><span>Crushed Flake Milkshake</span><span>MWK 14000</span></div>
+                            <div class="menu-item"><span>Ice Cream Float</span><span>MWK 12000</span></div>
+                            <div class="menu-item"><span>Choose a chocolate</span><span>MWK 14000</span></div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -334,15 +425,51 @@
     <section id="gallery" class="py-5 bg-light">
         <div class="container">
             <h2 class="section-title text-center">Food Gallery</h2>
-            <div class="row">
-                <div class="col-md-3 mb-3"><img src="https://www.kipsrestaurants.com/images/kips_images/kips-burger-chips.jpeg" alt="Burger"></div>
-                <div class="col-md-3 mb-3"><img src="https://www.kipsrestaurants.com/images/kips_images/kips-pizza-items.jpeg" alt="Pizza"></div>
-                <div class="col-md-3 mb-3"><img src="https://www.kipsrestaurants.com/images/kips_images/chicken-chips.jpeg" alt="Chicken Chips"></div>
-                <div class="col-md-3 mb-3"><img src="https://www.kipsrestaurants.com/images/kips_images/kips-icecream-logo.jpeg" alt="Ice Cream"></div>
-                <div class="col-md-3 mb-3"><img src="https://www.kipsrestaurants.com/images/kips_images/chicken-chips-1.jpeg" alt="Chicken & Chips"></div>
-                <div class="col-md-3 mb-3"><img src="https://www.kipsrestaurants.com/images/kips_images/omlette-chips.jpeg" alt="Omelette & Chips"></div>
-                <div class="col-md-3 mb-3"><img src="https://www.kipsrestaurants.com/images/kips_images/chck-mayo-sandwich.jpeg" alt="Chicken Mayo Sandwich"></div>
-                <div class="col-md-3 mb-3"><img src="https://www.kipsrestaurants.com/images/kips_images/kips-chambo.jpeg" alt="Chambo"></div>
+            <div id="foodCarousel" class="carousel slide gallery" data-bs-ride="true">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#foodCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#foodCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#foodCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#foodCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                    <button type="button" data-bs-target="#foodCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                    <button type="button" data-bs-target="#foodCarousel" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                    <button type="button" data-bs-target="#foodCarousel" data-bs-slide-to="6" aria-label="Slide 7"></button>
+                    <button type="button" data-bs-target="#foodCarousel" data-bs-slide-to="7" aria-label="Slide 8"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="https://www.kipsrestaurants.com/images/kips_images/kips-burger-chips.jpeg" class="d-block w-100" alt="Burger">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://www.kipsrestaurants.com/images/kips_images/kips-pizza-items.jpeg" class="d-block w-100" alt="Pizza">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://www.kipsrestaurants.com/images/kips_images/chicken-chips.jpeg" class="d-block w-100" alt="Chicken Chips">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://www.kipsrestaurants.com/images/kips_images/kips-icecream-logo.jpeg" class="d-block w-100" alt="Ice Cream">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://www.kipsrestaurants.com/images/kips_images/chicken-chips-1.jpeg" class="d-block w-100" alt="Chicken & Chips">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://www.kipsrestaurants.com/images/kips_images/omlette-chips.jpeg" class="d-block w-100" alt="Omelette & Chips">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://www.kipsrestaurants.com/images/kips_images/chck-mayo-sandwich.jpeg" class="d-block w-100" alt="Chicken Mayo Sandwich">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://www.kipsrestaurants.com/images/kips_images/kips-chambo.jpeg" class="d-block w-100" alt="Chambo">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#foodCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#foodCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
             </div>
         </div>
     </section>
@@ -350,15 +477,15 @@
     <section id="feedback" class="py-5">
         <div class="container">
             <h2 class="section-title text-center">Feedback</h2>
-            <form class="mx-auto" style="max-width: 500px;">
+            <form class="mx-auto" style="max-width: 500px;" onsubmit="alert('Feedback submitted!'); return false;">
                 <div class="mb-3">
-                    <input type="text" class="form-control" placeholder="Your Name">
+                    <input type="text" class="form-control" placeholder="Your Name" required>
                 </div>
                 <div class="mb-3">
-                    <input type="email" class="form-control" placeholder="Your Email">
+                    <input type="email" class="form-control" placeholder="Your Email" required>
                 </div>
                 <div class="mb-3">
-                    <textarea class="form-control" rows="5" placeholder="Your Feedback"></textarea>
+                    <textarea class="form-control" rows="5" placeholder="Your Feedback" required></textarea>
                 </div>
                 <button type="submit" class="btn btn-primary w-100">Submit</button>
             </form>
@@ -395,27 +522,27 @@
         });
 
         const searchInput = document.getElementById('menuSearch');
-        const menuContent = document.getElementById('menuContent');
-        if (searchInput && menuContent) {
+        if (searchInput) {
             searchInput.addEventListener('input', function() {
                 const filter = this.value.toLowerCase();
-                const sections = menuContent.querySelectorAll('.menu-section');
-                sections.forEach(section => {
-                    const items = section.querySelectorAll('.menu-item, h4');
-                    let sectionVisible = false;
-                    items.forEach(item => {
-                        if (item.textContent.toLowerCase().includes(filter)) {
-                            item.style.display = '';
-                            sectionVisible = true;
+                const accordions = document.querySelectorAll('.accordion-item');
+                accordions.forEach(item => {
+                    const header = item.querySelector('.accordion-button');
+                    const body = item.querySelector('.accordion-body');
+                    const items = body.querySelectorAll('.menu-item, h4');
+                    let visible = false;
+                    items.forEach(el => {
+                        if (el.textContent.toLowerCase().includes(filter)) {
+                            el.style.display = '';
+                            visible = true;
                         } else {
-                            item.style.display = 'none';
+                            el.style.display = 'none';
                         }
                     });
-                    const header = section.querySelector('h3');
-                    if (header && header.textContent.toLowerCase().includes(filter)) {
-                        sectionVisible = true;
+                    if (header.textContent.toLowerCase().includes(filter)) {
+                        visible = true;
                     }
-                    section.style.display = sectionVisible ? '' : 'none';
+                    item.style.display = visible ? '' : 'none';
                 });
             });
         }
