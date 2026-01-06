@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,57 +14,63 @@
             overflow-x: hidden;
         }
         .navbar {
+            background-color: rgba(0, 0, 0, 0.85) !important;
+            padding: 1.2rem 0;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+            transition: background-color 0.4s ease;
+        }
+        .navbar.scrolled {
             background-color: #000 !important;
-            padding: 1rem 0;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            transition: background-color 0.3s ease;
         }
         .navbar-brand img {
-            height: 60px;
-            transition: transform 0.3s ease;
+            height: 65px;
+            transition: transform 0.4s ease;
         }
         .navbar-brand img:hover {
-            transform: scale(1.05);
+            transform: rotate(5deg) scale(1.1);
         }
         .nav-link {
             color: #fff !important;
-            font-weight: 500;
-            margin: 0 1rem;
+            font-weight: 600;
+            margin: 0 1.2rem;
             position: relative;
-            transition: color 0.3s ease;
+            transition: color 0.4s ease, transform 0.4s ease;
         }
         .nav-link::after {
             content: '';
             position: absolute;
             width: 0;
-            height: 2px;
-            bottom: -5px;
+            height: 3px;
+            bottom: -6px;
             left: 0;
             background-color: #dc3545;
-            transition: width 0.3s ease;
+            transition: width 0.4s ease;
         }
         .nav-link:hover::after {
             width: 100%;
         }
         .nav-link:hover {
             color: #dc3545 !important;
+            transform: translateY(-2px);
         }
         .order-btn {
             background-color: #dc3545;
             border: none;
             font-weight: bold;
-            padding: 0.5rem 1.5rem;
-            transition: background-color 0.3s ease, transform 0.3s ease;
+            padding: 0.6rem 1.8rem;
+            transition: background-color 0.4s ease, transform 0.4s ease, box-shadow 0.4s ease;
+            box-shadow: 0 4px 8px rgba(220, 53, 69, 0.3);
         }
         .order-btn:hover {
             background-color: #c82333;
-            transform: translateY(-2px);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(200, 35, 51, 0.4);
         }
         .hero {
             background-image: url('https://www.kipsrestaurants.com/images/kips_images/chicken-chips-1.jpeg');
             background-size: cover;
             background-position: center;
-            height: calc(100vh - 70px); /* Adjusted for larger navbar */
+            height: calc(100vh - 80px);
             position: relative;
             overflow: hidden;
         }
@@ -76,7 +81,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2));
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3));
             z-index: 1;
         }
         .hero-content {
@@ -88,28 +93,46 @@
             color: #fff;
             z-index: 2;
             opacity: 0;
-            animation: fadeIn 1.5s ease forwards;
+            animation: fadeInUp 2s ease forwards;
         }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translate(-50%, -60%); }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translate(-50%, -40%); }
             to { opacity: 1; transform: translate(-50%, -50%); }
         }
         .hero h1 {
             font-family: 'Playfair Display', serif;
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6);
+            letter-spacing: 1px;
         }
         .hero p {
-            font-size: 1.5rem;
-            font-weight: 300;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+            font-size: 1.8rem;
+            font-weight: 400;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            margin-bottom: 2rem;
         }
-        /* Minimal adjustments for other sections if needed, but keeping home minimal */
+        .hero-btn {
+            background-color: #dc3545;
+            border: none;
+            font-weight: bold;
+            padding: 0.8rem 2.5rem;
+            transition: background-color 0.4s ease, transform 0.4s ease;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        .hero-btn:hover {
+            background-color: #c82333;
+            transform: scale(1.1);
+        }
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
             <a class="navbar-brand" href="index.html">
                 <img src="https://www.kipsrestaurants.com/images/kips_images/kips-icecream-logo.jpeg" alt="Kips Logo">
@@ -133,14 +156,23 @@
     </nav>
 
     <section class="hero">
-        <!-- Added subtle welcome text for attractiveness, but kept minimal as per original intent -->
         <div class="hero-content">
             <h1>Welcome to Kips</h1>
-            <p>Delicious Meals & Ice Cream in Malawi</p>
+            <p>Indulge in Delicious Meals & Refreshing Ice Creams</p>
+            <a href="menu.html" class="btn hero-btn text-white">Explore Menu</a>
         </div>
     </section>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script>
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
 </body>
 </html>
-```
